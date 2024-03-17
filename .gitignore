@@ -11,6 +11,15 @@
 # production
 /build
 
+.serverless
+node_modules
+
+.env
+
+build
+
+.serverless
+
 # misc
 .DS_Store
 .env.local
