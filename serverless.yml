@@ -1,4 +1,4 @@
-service: notes-api
+service: toothsy-api
 
 package:
   individually: true
@@ -15,7 +15,7 @@ provider:
   region: ap-south-1
 
   environment:
-    tableName: notes
+    tableName: appointment
     stripeSecretKey: ${.env:STRIPE_SECRET_KEY}
 
   iam:
@@ -31,7 +31,7 @@ functions:
     handler: create.main
     events:
       - http:
-          path: notes
+          path: appointment
           method: post
           cors: true
           authorizer: aws_iam
@@ -42,7 +42,7 @@ functions:
     handler: get.main
     events:
       - http:
-          path: notes/{id}
+          path: appointment/{id}
           method: get
           cors: true
           authorizer: aws_iam
@@ -51,7 +51,7 @@ functions:
     handler: list.main
     events:
       - http:
-          path: notes
+          path: appointment
           method: get
           cors: true
           authorizer: aws_iam
@@ -60,7 +60,7 @@ functions:
     handler: update.main
     events:
       - http:
-          path: notes/{id}
+          path: appointment/{id}
           method: put
           cors: true
           authorizer: aws_iam
@@ -69,7 +69,7 @@ functions:
     handler: delete.main
     events:
       - http:
-          path: notes/{id}
+          path: appointment/{id}
           method: delete
           cors: true
           authorizer: aws_iam
