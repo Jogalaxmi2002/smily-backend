@@ -1,4 +1,4 @@
-service: toothsy-api
+service: smily-api
 
 package:
   individually: true

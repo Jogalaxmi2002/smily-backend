@@ -21,7 +21,7 @@
   "dependencies": {
     "@aws-sdk/client-dynamodb": "^3.344.0",
     "amazon-cognito-identity-js": "^6.2.0",
-    "aws-sdk": "^2.1389.0",
+    "aws-sdk": "^2.1581.0",
     "stripe": "^12.8.0"
   }
 }
